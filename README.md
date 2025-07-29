@@ -21,13 +21,18 @@ Platforms like GitHub that are used for version control, code hosting, and colla
 - This `.git` folder contains all the metadata (version history, configs, logs, etc.) required to track changes in your code.
 
 ## 3) What is inside the `.git` folder?
+<img width="768" height="537" alt="image" src="https://github.com/user-attachments/assets/b8d8f74c-d93e-4e54-bd90-931286bc4257" />
 
 ## 4) What is the use of the `git status` command?
-The `git status` command is used to check the current state of your working directory and staging area.  
+The `git status` command is used to check the current state of your working directory and staging area. 
+<img width="598" height="255" alt="image" src="https://github.com/user-attachments/assets/bd47a8d7-d78f-432c-a08b-8a539626eb14" />
+
 Useful for if any changes are made after the git commit (modified file tracks).
 
 ## 5) Use of `git add .`
 - Stage all changes (new files, modified files, and deletions) in the current directory and subdirectories for the next commit.
+- <img width="914" height="196" alt="image" src="https://github.com/user-attachments/assets/1db77456-61b7-47ce-9bff-5c87ff0538ec" />
+
 - For a particular file if you want to add then command is `git add <filename>`
 
 ## 6) `git commit -m "new commit"`
@@ -36,18 +41,32 @@ The `git commit -m` command is used to save (commit) your staged changes in Git 
 ## 7) If you want to remove the stage of current file then you write `git restore`
 ```bash
 git restore --staged <filename>
+<img width="975" height="182" alt="image" src="https://github.com/user-attachments/assets/fafc4bd3-672d-4768-93cc-35a8e3d9981d" />
+<img width="759" height="475" alt="image" src="https://github.com/user-attachments/assets/886bf727-fb8b-407e-8b10-34e1e53eb790" />
+
+
 ```
 
 ## 8) `git log`
 The `git log` command is used to view the history of commits in a Git repository.
+<img width="698" height="323" alt="image" src="https://github.com/user-attachments/assets/722a45f6-ff81-45ec-a4a8-bc3ad76b0ab4" />
+
 
 ## 9) If you want to remove the last commit because the file has been deleted by mistake then how can you do it?
+<img width="533" height="421" alt="image" src="https://github.com/user-attachments/assets/58f27848-3d34-40c1-9136-ed491ba2b7eb" />
+
 Suppose here you want to delete last two commits then:  
 Then copy the hash before that last two commits.  
+<img width="975" height="145" alt="image" src="https://github.com/user-attachments/assets/88e59ca4-547e-4daa-83ea-9932b79bd3d6" />
+
 Then again you check `git log` now you will be only see the one commit.
+<img width="768" height="253" alt="image" src="https://github.com/user-attachments/assets/e6c76c32-a8d6-446e-91aa-5527debb0399" />
+
 
 ## 10) Where these all changes has gone?
 In the unstaged area.
+<img width="701" height="310" alt="image" src="https://github.com/user-attachments/assets/bbae0228-eb1f-43c8-9039-d62fe0f66d76" />
+
 
 ## 11) If you want that your progress or a feature of the project that code you have written,
 is there any way so that put your work somewhere else without making a commit and history and whenever you want that things back you get it?  
