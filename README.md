@@ -2,6 +2,9 @@
 This repository serves as a comprehensive guide to understanding Git and GitHub, curated for learning purposes. It covers everything from the basics of version control to more advanced Git operations, making it ideal for beginners and intermediate users alike.
 # Git & GitHub Notes
 
+## What is Git?
+Git is a free and open-source distributed version control system that manages everything GitHub-related locally on your machine.
+
 ## 1) What are the other platforms same as GitHub to version and maintain your code?
 Platforms like GitHub that are used for version control, code hosting, and collaboration:
 # Git Hosting Platform Comparison
