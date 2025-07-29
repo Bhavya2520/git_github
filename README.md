@@ -10,30 +10,30 @@ Git is a free and open-source distributed version control system that manages ev
 Follow these steps to initialize your Git repository and push your code to GitHub:
 
 ```bash
-# Step 1: Initialize Git in your local project
+##Step 1: Initialize Git in your local project
 git init
-# This creates a hidden .git folder in your project directory that stores all version control info.
+##This creates a hidden .git folder in your project directory that stores all version control info.
 
-# Step 2: Add files to the staging area
+##Step 2: Add files to the staging area
 git add .
-# Stages all files in the current directory.
-# You can also stage a specific file using:
+##Stages all files in the current directory.
+##You can also stage a specific file using:
 git add <filename>
 
-# Step 3: Commit the staged changes
+##Step 3: Commit the staged changes
 git commit -m "Initial commit"
-# Commits the staged snapshot with a descriptive message.
+##Commits the staged snapshot with a descriptive message.
 
-# Step 4: Add the remote GitHub repository URL
+##Step 4: Add the remote GitHub repository URL
 git remote add origin https://github.com/your-username/your-repo.git
-# Replace with your actual GitHub repo URL.
+##Replace with your actual GitHub repo URL.
 
-# Step 5: Verify the remote URL
+##Step 5: Verify the remote URL
 git remote -v
 
-# Step 6: Push code to the main branch on GitHub
+##Step 6: Push code to the main branch on GitHub
 git push origin main
-# Use 'main' or 'master' depending on your default branch.
+##Use 'main' or 'master' depending on your default branch.
 
 ## 1) What are the other platforms same as GitHub to version and maintain your code?
 Platforms like GitHub that are used for version control, code hosting, and collaboration:
