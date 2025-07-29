@@ -9,7 +9,7 @@ Git is a free and open-source distributed version control system that manages ev
 
 Follow these steps to initialize your Git repository and push your code to GitHub:
 
-```bash
+
 # Step 1: Initialize Git in your local project
 git init
 # This creates a hidden .git folder in your project directory that stores all version control info.
@@ -35,7 +35,7 @@ git remote -v
 git push origin main
 # Use 'main' or 'master' depending on your default branch.
 
-```
+##
 
 
 
@@ -240,6 +240,11 @@ Means here it is three squash has been merged in first pick.
 These conflict often happen when if one user has changed the code in line number 3 and another people have also changed the code in line number 3.  
 At that time Git will ask you to help which changes should be done.
 
+## 31) how to delete a branch 
+if you have already merge your branch to the master branch then if you want to delete a branch then 
+git branch -d <branchname>
+
+## Remember you are not able to create a pull request to <feature> to <master> branch by cmd for that you have to use Github by UI
 ---
  
 <img width="818" height="432" alt="image" src="https://github.com/user-attachments/assets/23481fbc-cc59-474f-9f51-c72ca0e94a25" />
