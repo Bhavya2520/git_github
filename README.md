@@ -1,45 +1,151 @@
 # git_github
 This repository serves as a comprehensive guide to understanding Git and GitHub, curated for learning purposes. It covers everything from the basics of version control to more advanced Git operations, making it ideal for beginners and intermediate users alike.
-# Git & GitHub Guide
+# Git & GitHub Notes
 
-## What is Git?
-Git is a free and open-source distributed version control system that manages everything GitHub-related locally on your machine.
+## 1) What are the other platforms same as GitHub to version and maintain your code?
+Platforms like GitHub that are used for version control, code hosting, and collaboration:
+# Git Hosting Platform Comparison
+
+| Platform        | Best For                                      |
+|-----------------|-----------------------------------------------|
+| **GitHub**      | Open-source, community, and collaboration     |
+| **GitLab**      | DevOps in one place                           |
+| **Bitbucket**   | Jira/Atlassian users                          |
+| **SourceForge** | Older open-source projects                    |
+| **CodeCommit**  | AWS users                                     |
+| **Azure Repos** | Microsoft/Azure ecosystem                     |
+
+
+## 2) `git init`
+- It creates a hidden folder named `.git` in your directory.
+- This `.git` folder contains all the metadata (version history, configs, logs, etc.) required to track changes in your code.
+
+## 3) What is inside the `.git` folder?
+
+## 4) What is the use of the `git status` command?
+The `git status` command is used to check the current state of your working directory and staging area.  
+Useful for if any changes are made after the git commit (modified file tracks).
+
+## 5) Use of `git add .`
+- Stage all changes (new files, modified files, and deletions) in the current directory and subdirectories for the next commit.
+- For a particular file if you want to add then command is `git add <filename>`
+
+## 6) `git commit -m "new commit"`
+The `git commit -m` command is used to save (commit) your staged changes in Git with a message.
+
+## 7) If you want to remove the stage of current file then you write `git restore`
+```bash
+git restore --staged <filename>
+```
+
+## 8) `git log`
+The `git log` command is used to view the history of commits in a Git repository.
+
+## 9) If you want to remove the last commit because the file has been deleted by mistake then how can you do it?
+Suppose here you want to delete last two commits then:  
+Then copy the hash before that last two commits.  
+Then again you check `git log` now you will be only see the one commit.
+
+## 10) Where these all changes has gone?
+In the unstaged area.
+
+## 11) If you want that your progress or a feature of the project that code you have written,
+is there any way so that put your work somewhere else without making a commit and history and whenever you want that things back you get it?  
+Command: `git stash`  
+
+If you do not want to lose your current status of the git and also do not want that changes in your repo.  
+You're just saying: just go back to the stage and when I need I will call for you.
+
+## 12) For calling stash in project folder
+Command: `git stash pop`
+
+## 13) If you want to clear or remove the stash which you have stored then
+Command: `git stash clear`
+
+## 14) To add project on GitHub repo
+Command: `git remote add origin <link of repo>.git`
+
+## 15) If you want to see the link which is associated with this folder then command is
+Command: `git remote -v`
+
+## 16) For push code in the repository
+Command: `git push origin <branch name_master>`
+
+## 17) How to create a branch
+Command: `git branch <branch name>`
+
+## 18) How to change the branch
+Command: `git checkout <branchname>`  
+Means head is changing towards the branch name that you have provided.
+
+**Note:** Whenever you are creating a new branch at that time the new branch is created from your head is currently pointing.  
+
+Create a new branch with the given name and switch to it immediately:  
+```bash
+git checkout -b feature1
+```
+
+## 19) How to clone the repository which is already exist
+Command: `git clone <link>`
+
+## 20) Why we required to clone the repository
+Because whenever you are trying to add some code in some organization you did not able to push the code into the directly main repository.  
+It is so risky for that organization, so for that first of all you have to fork that repository into your GitHub account.  
+After that you can change the code by your own on your repo.
+
+## 21) From where you have forked the repository that is known as upstream URL  
+And how to add upstream URL
+
+## 22) If you have created a type of branch separately and add one feature on that and you want to merge that feature on the main branch then how can you do it?
+For that you need to create PR request.
+
+**Note:** If one branch is `<main>` and another branch is `<new feature>` then if `<new feature>` branch has made a request to push the code onto the main branch, only one time pull request has been created.  
+And after that again if you commit some other things onto the `<new feature>` branch at that time new pull request is not being generated — it is automatically added into the main branch.
+
+## 23) At a time only one PR is open
+
+## 24) But I have confused in that if I feel like I have completed my feature and after the code reviewer says that you have to add these things and I have to add those things into my branch but I have already created one PR for pushing my code already with the main branch — so if I commit the new changes in my branch, that is also reflected on the main branch?
+
+## 25) Merging main branch with my feature branch and after two months the client says that I want these changes in this feature so I have already created PR previously — I have just explained — then I need to change the code or change the new feature — then in that case what should be done
+
+## 26)
+
+## 27) If update like open source project of Kubernetes has accepted some request of one of the user then definitely it will not reflect onto your local branch or the repo that you have forked in your machine or GitHub account because you have forked before the merging that code so for that what do you use?
+You can go to your GitHub account and do with UI or you can also do it with manual step.
+
+Now reset the main branch of your origin to the main branch of the upstream.
+
+You can also run `git pull upstream main` but there is a difference between these two commands.
+
+## 28) Difference between `git fetch` and `git pull`
+
+## 29) Rebase command
+If I have created one file “1” and then commit, again created file “2” and commit, again created file “3” and commit, again created file “4” and commit.
+
+But now I want to merge that all four commits into the one commit then using `rebase -i` you can use it.
+
+I want to merge all these 4 commits into a single commit.
+
+Then change the pick here to squash and update the code like in the screenshot.  
+Squash means about a squash commit merge into that pick commit.  
+Means here it is three squash has been merged in first pick.
+
+## 30) Merging conflicts
+These conflict often happen when if one user has changed the code in line number 3 and another people have also changed the code in line number 3.  
+At that time Git will ask you to help which changes should be done.
 
 ---
 
-## Alternatives to GitHub
-Platforms similar to GitHub used for version control and collaboration:
-
-- **GitLab**: Best for all-in-one DevOps lifecycle
-- **Bitbucket**
-- **SourceForge**
-- **AWS CodeCommit**
-- **Azure Repos**
+### Example of `git reset` vs `git revert`
 
 ---
 
-## Common Git Commands
+### Chat link of ChatGPT Git & GitHub session  
+🔗 https://chatgpt.com/share/6854f029-3ebc-8002-bbe6-2e0292d127ba
 
-### `git init`
-- Creates a hidden `.git` folder in your directory containing metadata.
+### Git cheatsheet screenshot
 
-### `git status`
-- Shows the current state of the working directory and staging area.
+---
 
-### `git add .`
-- Stages all changes (new, modified, deleted files).
-
-### `git add <filename>`
-- Stages a specific file.
-
-### `git commit -m "message"`
-- Commits staged changes with a message.
-
-### `git restore --staged <filename>`
-- Unstages a file without discarding changes.
-
-### `git log`
-- Views the commit history.
-
-### Undo Last Commits
-- Use `git log`, copy the hash before the last 2 commits, and reset:
+### Git commands reference  
+🔗 https://github.com/Bhavya2520/DevOps-Learning/blob/main/docs/git/commands.md
