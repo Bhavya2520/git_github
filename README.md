@@ -78,11 +78,9 @@ The `git commit -m` command is used to save (commit) your staged changes in Git 
 ## 7) If you want to remove the stage of current file then you write `git restore`
 ```bash
 git restore --staged <filename>
-<img width="975" height="182" alt="image" src="https://github.com/user-attachments/assets/fafc4bd3-672d-4768-93cc-35a8e3d9981d" />
-<img width="759" height="475" alt="image" src="https://github.com/user-attachments/assets/886bf727-fb8b-407e-8b10-34e1e53eb790" />
-
-
 ```
+<img width="1337" height="255" alt="image" src="https://github.com/user-attachments/assets/e6c24868-0277-44cf-99ed-b0f08c0984db" />
+<img width="1029" height="625" alt="image" src="https://github.com/user-attachments/assets/75feafbe-42e7-43f8-a682-e5614b301ba0" />
 
 ## 8) `git log`
 The `git log` command is used to view the history of commits in a Git repository.
