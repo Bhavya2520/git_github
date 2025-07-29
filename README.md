@@ -184,6 +184,12 @@ And after that again if you commit some other things onto the `<new feature>` br
 <img width="975" height="506" alt="image" src="https://github.com/user-attachments/assets/d274a527-9b3a-4e59-aff1-03c0683a6b48" />
 <img width="975" height="414" alt="image" src="https://github.com/user-attachments/assets/137d4d4e-9e70-4196-8c84-9fa2cdae7493" />
 
+but in this case code reviewer is only able to see the code not the changes like if code is for UI than he will not able to see that dffrences in that case 🔹 Solution:
+Help your code reviewer by giving them visual context:
+
+✅ Option 1: Add Screenshots or GIFs
+✅ Option 2: Live Preview Link
+✅ Option 3: Explain What Changed
 
 ## 25) Merging main branch with my feature branch and after two months the client says that I want these changes in this feature so I have already created PR previously — I have just explained — then I need to change the code or change the new feature — then in that case what should be done
 <img width="633" height="466" alt="image" src="https://github.com/user-attachments/assets/ceb79a4e-beed-4837-8125-2a384a245b40" />
