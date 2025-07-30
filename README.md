@@ -36,6 +36,7 @@ git push origin main
 ## Use 'main' or 'master' depending on your default branch.
 
 ##
+## git architecture 
 
 
 
@@ -243,6 +244,9 @@ At that time Git will ask you to help which changes should be done.
 ## 31) how to delete a branch 
 if you have already merge your branch to the master branch then if you want to delete a branch then 
 git branch -d <branchname>
+
+## 32) git add . and commit together 
+git commit -am "add+commit"
 
 ## Remember you are not able to create a pull request to <feature> to <master> branch by cmd for that you have to use Github by UI
 ---
