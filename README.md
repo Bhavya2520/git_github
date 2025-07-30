@@ -37,6 +37,7 @@ git push origin main
 
 ##
 ## git architecture 
+<img width="743" height="605" alt="image" src="https://github.com/user-attachments/assets/8695adf8-aea3-4270-b181-58d43510a6b2" />
 
 
 
@@ -75,6 +76,8 @@ Useful for if any changes are made after the git commit (modified file tracks).
 
 ## 6) `git commit -m "new commit"`
 The `git commit -m` command is used to save (commit) your staged changes in Git with a message.
+## file status 
+<img width="785" height="505" alt="image" src="https://github.com/user-attachments/assets/14a9bbf0-7e1f-4d00-a0da-d8e749c50636" />
 
 ## 7) If you want to remove the stage of current file then you write `git restore`
 ```bash
@@ -248,7 +251,53 @@ git branch -d <branchname>
 ## 32) git add . and commit together 
 git commit -am "add+commit"
 
+## 33) to remove git folder and tracking all things from git
+rm -rf .git
 ## Remember you are not able to create a pull request to <feature> to <master> branch by cmd for that you have to use Github by UI
+
+## 34) If you want to ignore the folders and files to tracking then
+
+first you create .gitignore then inside that file write file or folder that you want to untrack ,like you have dir folder then write /dir 
+if you want that every file that is type of .log file then type *.log 
+if you have dir folder 2 times , 1 at main folder and another at inside /static/dir then if you write ignore /dir then all folder will untrack but if you want to untrack only outside folder then write /dir/
+or if you want to only untrack inside static then write /static/dir 
+
+## 35) If you want difference between files before commit 
+then you can simply write git diff = so it shows that which changes are under the staging area means which you have not commit yet
+git diff = shows diff between staging area and working dir
+but if you have already commited and and no things in the staging area and you want to see the diff between files then 
+git dif --stage = shows diff between last commit to current staging area 
+
+## 36) If you want to skip the staging area
+git commit -a -m "commit"
+note that it is only applicable on tracked files means which file is already added in tracking 
+if you have created new file and also changing things in previuosly present track file and then write this command then only track files goes to the commit not the newly created one for that you have to first track that file like git add second.txt then you can use this command
+
+## 37) If you've already track first.txt and now you want to untrack this file so for that you will write this file name into .gitignore  file
+But this is wrong way , if you change first.txt file then apply git status, then also it shows the changing in first.txt so for that you have tell to the git that now you want to you don't want to track this file command: git rm --cached first.txt
+
+## 38) If you want to see what changes has been done in commit
+git log -p
+git log -p -2(shows last 2 commit )
+git log --state
+git log --pretty=oneline
+git log --pretty=short
+git log --since=2.weeks
+git log --since=2.days
+git log --since=2.months  
+git log --pretty=foramt:"%h --ae%" (shows hash with author name andd email-for more visit git website)
+
+## 39) To unstage a file = removing from the staging area 
+git restore --staged <filename>
+
+## 40)  if you have deleted some content on first.txt and you want toretrieve that content again then what you can do 
+git checkout -- first.txt
+this command will match your file to the last commit
+
+## 41) If you want that all files to be as it as last commit then 
+git checkout -f
+
+
 ---
  
 <img width="818" height="432" alt="image" src="https://github.com/user-attachments/assets/23481fbc-cc59-474f-9f51-c72ca0e94a25" />
