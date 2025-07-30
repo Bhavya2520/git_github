@@ -297,6 +297,15 @@ this command will match your file to the last commit
 ## 41) If you want that all files to be as it as last commit then 
 git checkout -f
 
+## 42) Branches
+Show all branches= git branch -v
+Show merge branches= git branch --merged
+Show non merge branches= git branch --no-merged
+delete a branch =  git branch -d <branchname> =it will not be deleted if branch has not merged 
+forcefully delete a branch =  git branch -D <branchname>
+
+
+
 
 ---
  
